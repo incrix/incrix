@@ -3,9 +3,7 @@ import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from "@mui/material";
 import theme from "@/components/Theme";
-import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import Funnel from "@/components/Funnel/Funnel";
 
 const centraleSans = localFont({
   src: [
@@ -56,14 +54,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
-      
         <body className={`${centraleSans.variable}`}>
         <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>
-        <Header />
         {children}
-        <Funnel />
         <Footer />
         </ThemeProvider>
         </AppRouterCacheProvider>

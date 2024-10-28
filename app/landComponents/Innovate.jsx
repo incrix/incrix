@@ -7,6 +7,7 @@ export default function Innovate() {
     <Stack>
       <Stack
         width={"100%"}
+        overflow={"hidden"}
         position={"relative"}
         bgcolor={"black"}
         color={"white"}
@@ -27,7 +28,13 @@ export default function Innovate() {
           m={"150px 0"}
         >
           <Typography
-            fontSize={80}
+            fontSize={{
+              xs: 40,
+              sm: 40,
+              md: 40,
+              lg: 80,
+              xl: 80,
+            }}
             fontWeight={500}
             lineHeight={"120%"}
             letterSpacing={"0"}
@@ -46,6 +53,7 @@ export default function Innovate() {
         <Stack
           position={"absolute"}
           width={"100%"}
+          height={"100%"}
           sx={{
             top: "50%",
             left: "50%",
@@ -57,6 +65,8 @@ export default function Innovate() {
             alt={"innovate"}
             style={{
               width: "100%",
+              height: "100%",
+              objectFit: "cover",
             }}
           />
         </Stack>

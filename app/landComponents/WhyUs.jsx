@@ -88,7 +88,13 @@ function CustomAccordion({ title, content }) {
       sx={{
         border: "1px solid #000",
         borderRadius: "0 !important",
-        width: "50%",
+        width: {
+          xs: "100%",
+          sm: "100%",
+          md: "50%",
+          lg: "50%",
+          xl: "50%",
+        },
         padding: "20px",
         margin: "0",
         "&.Mui-expanded": {
@@ -106,7 +112,13 @@ function CustomAccordion({ title, content }) {
         sx={{
           boxShadow: "none",
           textTransform: "uppercase",
-          fontSize: "28px",
+          fontSize: {
+            xs: "18px",
+            sm: "18px",
+            md: "18px",
+            lg: "24px",
+            xl: "28px",
+          },
           fontWeight: "500",
         }}
       >
@@ -114,7 +126,13 @@ function CustomAccordion({ title, content }) {
       </AccordionSummary>
       <AccordionDetails
         sx={{
-          fontSize: "20px",
+          fontSize: {
+            xs: "16px",
+            sm: "16px",
+            md: "16px",
+            lg: "20px",
+            xl: "20px",
+          },
         }}
       >
         {content}

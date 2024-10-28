@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 import { Stack } from "@mui/material";
 import NavBar from "./NavBar";
 
-export default function HamMenu() {
+export default function HamMenu({ isLight }) {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
@@ -13,6 +13,7 @@ export default function HamMenu() {
   return (
     <Stack
       position={"fixed"}
+      onClick={handleClick}
       top={{
         xs: "calc(var(--md-side-padding) + 8px)",
         sm: "calc(var(--md-side-padding) + 8px)",
@@ -50,10 +51,13 @@ export default function HamMenu() {
           height: "100%",
           width: "100%",
           borderRadius: "50%",
-          backgroundColor: isActive ? "white" : "black",
+          backgroundColor: isLight ? (isActive ? "white" : "black") : "white",
           transition: "background-color 0.3s ease-in-out",
           "&:hover": {
             backgroundColor: isActive ? "white" : "var(--primary)",
+          },
+          "&:hover path": {
+            stroke: !isLight && !isActive ? "white !important" : "",
           },
         }}
       >
@@ -67,14 +71,41 @@ export default function HamMenu() {
         >
           <path
             className={`${styles.line} ${styles.top}`}
+            style={{
+              stroke: isLight
+                ? isActive
+                  ? "var(--primary)"
+                  : "white"
+                : isActive
+                ? "var(--primary)"
+                : "black",
+            }}
             d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013"
           />
           <path
             className={`${styles.line} ${styles.middle}`}
             d="m 70,50 h -40"
+            style={{
+              stroke: isLight
+                ? isActive
+                  ? "var(--primary)"
+                  : "white"
+                : isActive
+                ? "var(--primary)"
+                : "black",
+            }}
           />
           <path
             className={`${styles.line} ${styles.bottom}`}
+            style={{
+              stroke: isLight
+                ? isActive
+                  ? "var(--primary)"
+                  : "white"
+                : isActive
+                ? "var(--primary)"
+                : "black",
+            }}
             d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40"
           />
         </svg>

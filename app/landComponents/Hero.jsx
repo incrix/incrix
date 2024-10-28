@@ -35,13 +35,14 @@ export default function Hero() {
           className="hero-tag"
           position={"absolute"}
           width={"100%"}
+          minWidth={"400px"}
           sx={{
             top: {
-              xs: "15%",
-              sm: "10%",
-              md: "5%",
-              lg: "5%",
-              xl: "0",
+              xs: "calc(80px + 2%)",
+              sm: "calc(80px + 2%)",
+              md: "calc(80px + 1%)",
+              lg: "calc(80px + 1%)",
+              xl: "80px",
             },
             left: "50%",
             transform: "translateX(-50%)",
@@ -159,13 +160,10 @@ function VideoPlayer() {
     >
       <video
         ref={videoRef}
-        // controls
         width={"100%"}
         style={{
           maxWidth: "1400px",
         }}
-        // height={617}
-        // style={{ borderRadius: "10px" }}
       >
         <source src="/assets/incrix.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -176,7 +174,13 @@ function VideoPlayer() {
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          fontSize: "100px",
+          fontSize: {
+            xs: "60px",
+            sm: "60px",
+            md: "80px",
+            lg: "80px",
+            xl: "100px",
+          },
         }}
         size="large"
         onClick={handlePlayPause}
@@ -211,12 +215,19 @@ function VideoPlayer() {
           right: "10px",
           transform: "translateY(50%) translateX(-50%)",
           bgcolor: "rgba(0, 0, 0, 0.1)",
+          fontSize: {
+            xs: "18px",
+            sm: "22px",
+            md: "24px",
+            lg: "24px",
+            xl: "24px",
+          },
         }}
-        size="large"
         onClick={handleFullscreen}
         aria-label="fullscreen"
       >
         <FullscreenRoundedIcon
+          fontSize="inherit"
           sx={{
             fill: "white",
           }}

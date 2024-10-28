@@ -21,12 +21,20 @@ export default function StartupIndia() {
         mb={10}
         alignItems={"center"}
       >
-        <Stack direction={"row"} alignItems={"center"} gap={2}>
+        <Stack
+          direction={{
+            xs: "column",
+            md: "row",
+          }}
+          alignItems={"center"}
+          gap={2}
+        >
           <Image
             src={logo}
             alt={"logo"}
             style={{
               width: "160px",
+              height: "auto",
             }}
           />
           <Typography>IS NOW OFFICIALLY RECOGNIZED BY</Typography>
@@ -37,6 +45,7 @@ export default function StartupIndia() {
             alt={"startup"}
             style={{
               width: "100%",
+              objectFit: "contain",
             }}
           />
           <Image
@@ -46,6 +55,8 @@ export default function StartupIndia() {
               position: "absolute",
               top: "50%",
               left: "50%",
+              width: "100%",
+              objectFit: "contain",
               transform: "translate(-50%, -50%)",
             }}
           />
@@ -57,6 +68,8 @@ export default function StartupIndia() {
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
+              width: "100%",
+              objectFit: "contain",
             }}
           />
         </Stack>
@@ -67,7 +80,7 @@ export default function StartupIndia() {
             India!
           </Typography>
           <Link
-            href="https://www.startupindia.gov.in/"
+            href="https://www.startupindia.gov.in/content/sih/en/block-chain-recognised-certificate.html?DIPP=DIPP116789"
             style={{
               backgroundColor: "var(--primary)",
               color: "white",
@@ -75,6 +88,8 @@ export default function StartupIndia() {
               borderRadius: "50px",
               fontWeight: "500",
             }}
+            rel="noopener noreferrer"
+            target="_blank"
           >
             View Certificate
           </Link>

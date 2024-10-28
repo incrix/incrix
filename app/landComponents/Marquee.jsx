@@ -164,7 +164,17 @@ export default function Marquee() {
 
 function CustomTypo({ children }) {
   return (
-    <Typography className={styles.loopText} fontWeight={500} fontSize={28}>
+    <Typography
+      className={styles.loopText}
+      fontWeight={500}
+      fontSize={{
+        xs: 20,
+        sm: 20,
+        md: 28,
+        lg: 28,
+        xl: 28,
+      }}
+    >
       {children}
     </Typography>
   );

@@ -25,41 +25,45 @@ export default function NavBar() {
       <nav className={styles.nav}>
         <div className="nav-item-holder"></div>
         <div className="nav-item-holder">
-          <Link className={styles.link} href={"#"}>
+          <Link className={styles.link} href={"/"}>
             Home
           </Link>
         </div>
         <div className="nav-item-holder">
-          <Link className={styles.link} href={"#"}>
+          <Link className={styles.link} href={"/about"}>
             About
           </Link>
         </div>
         <div className="nav-item-holder">
-          <Link className={styles.link} href={"#"}>
+          <Link className={styles.link} href={"/streams/software"}>
             Software
           </Link>
         </div>
         <div className="nav-item-holder">
-          <Link className={styles.link} href={"#"}>
+          <Link className={styles.link} href={"/streams/branding"}>
             Branding
           </Link>
         </div>
         <div className="nav-item-holder">
-          <Link className={styles.link} href={"#"}>
+          <Link className={styles.link} href={"/streams/automation"}>
             Automation
           </Link>
         </div>
         <div className="nav-item-holder">
-          <Link className={styles.link} href={"#"}>
+          <Link className={styles.link} href={"/streams/education"}>
             Education
           </Link>
         </div>
         <Stack marginTop={"40px"} direction={"row"} gap={2}>
           <div className="nav-item-holder">
-            <Link className={styles.btnLink} href={"#"}>Contact</Link>
+            <Link className={styles.btnLink} href={"/contact"}>
+              Contact
+            </Link>
           </div>
           <div className="nav-item-holder">
-            <Link className={styles.btnLink} href={"#"}>Career</Link>
+            <Link className={styles.btnLink} href={"/career"}>
+              Career
+            </Link>
           </div>
         </Stack>
       </nav>

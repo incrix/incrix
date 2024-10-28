@@ -1,15 +1,16 @@
 import Image from "next/image";
 import LogoLight from "@/public/assets/logo-light.svg";
+import LogoDark from "@/public/assets/logo-dark.svg";
 import HamMenu from "./HamMenu";
 import styles from "./header.module.css";
 import { Stack } from "@mui/material";
 import Link from "next/link";
 import EastIcon from "@mui/icons-material/East";
 
-export default function Header() {
+export default function Header({ isLight }) {
   return (
     <Stack
-    position={"relative"}
+      position={"relative"}
       padding={{
         xs: "var(--md-side-padding)",
         md: "var(--md-side-padding)",
@@ -20,7 +21,11 @@ export default function Header() {
     >
       <header className={styles.header}>
         <Link href={"/"}>
-          <Image src={LogoLight} alt="Logo" height={25} />
+          <Image
+            src={(isLight && LogoLight) || LogoDark}
+            alt="Logo"
+            height={25}
+          />
         </Link>
         <Stack
           direction={"row"}
@@ -43,12 +48,13 @@ export default function Header() {
                 gap: "10px",
                 fontWeight: "500",
                 fontSize: "18px",
+                color: isLight ? "black" : "white",
               }}
             >
               Get a quote <EastIcon />
             </Link>
           </Stack>
-          <HamMenu />
+          <HamMenu isLight={isLight} />
         </Stack>
       </header>
     </Stack>

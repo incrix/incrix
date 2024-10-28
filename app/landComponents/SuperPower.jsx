@@ -16,11 +16,6 @@ export default function SuperPower() {
     target: wordElement,
     offset: ["start 0.9", "start 0.40"],
   });
-
-  useEffect(() => {
-    scrollYProgress.on("change", (e) => console.log(e));
-  }, []);
-
   return (
     <Stack>
       <Stack
@@ -47,10 +42,28 @@ export default function SuperPower() {
             variant="h4"
             sx={{
               textTransform: "uppercase",
+              display: "flex",
+              flexWrap: "wrap",
+              flexDirection: "row",
+              justifyContent: "center",
+              width: "100%",
             }}
-            fontSize={50}
+            fontSize={{
+              xs: 24,
+              sm: 32,
+              md: 40,
+              lg: 54,
+              xl: 60,
+            }}
             fontWeight={500}
             ref={wordElement}
+            gap={{
+              xs: 1,
+              sm: 1,
+              md: 3,
+              lg: 3,
+              xl: 3,
+            }}
           >
             {words.map((word, index) => {
               const start = index / words.length;
@@ -67,7 +80,13 @@ export default function SuperPower() {
             sx={{
               fontSize: 20,
               color: "var(--text-color)",
-              width: "60%",
+              width: {
+                xs: "100%",
+                sm: "100%",
+                md: "100%",
+                lg: "60%",
+                xl: "60%",
+              },
             }}
           >
             <motion.p ref={element} style={{ opacity: scrollYProgress }}>
@@ -92,7 +111,7 @@ const Word = ({ children, progress, range }) => {
         position: "relative",
       }}
     >
-      <span
+      {/* <span
         style={{
           position: "absolute",
           top: 0,
@@ -106,8 +125,12 @@ const Word = ({ children, progress, range }) => {
         }}
       >
         {children}
-      </span>
-      <motion.span style={{ opacity, marginRight: "20px" }}>
+      </span> */}
+      <motion.span
+        style={{
+          opacity,
+        }}
+      >
         {children}
       </motion.span>
     </span>

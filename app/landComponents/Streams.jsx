@@ -40,7 +40,14 @@ export default function Streams() {
             >
               Streams
             </Typography>
-            <Typography fontSize={48} fontWeight={500} lineHeight={"110%"}>
+            <Typography
+              fontSize={{
+                xs: 38,
+                md: 48,
+              }}
+              fontWeight={500}
+              lineHeight={"110%"}
+            >
               We&apos;re architects of
               <br />
               innovation
@@ -79,8 +86,25 @@ export default function Streams() {
               <Link href="/streams">Learn More</Link>
             </Stack>
           </Stack>
-          <Stack gap={5}>
-            <Stack direction={"row"} flexWrap={"wrap"} gap={5}>
+          <Stack
+            gap={{
+              xs: 2,
+              md: 5,
+            }}
+            alignItems={{
+              xs: "center",
+              md: "center",
+              lg: "flex-end",
+            }}
+          >
+            <Stack
+              direction={"row"}
+              flexWrap={"wrap"}
+              gap={{
+                xs: 2,
+                md: 5,
+              }}
+            >
               <StreamsCard
                 title={"Automation"}
                 img={automation}
@@ -92,7 +116,14 @@ export default function Streams() {
                 link={"/streams/branding"}
               />
             </Stack>
-            <Stack direction={"row"} flexWrap={"wrap"} gap={5}>
+            <Stack
+              direction={"row"}
+              flexWrap={"wrap"}
+              gap={{
+                xs: 2,
+                md: 5,
+              }}
+            >
               <StreamsCard
                 title={"Development"}
                 img={dev}
@@ -129,7 +160,6 @@ function StreamsCard({ title, img, link }) {
     >
       <Stack
         className="streams-card"
-        gap={2}
         sx={{
           padding: "20px",
           borderRadius: "10px",
@@ -149,22 +179,36 @@ function StreamsCard({ title, img, link }) {
             backgroundColor: "#AAAAAA",
           },
         }}
-        width={"200px"}
-        height={"200px"}
+        width={{
+          xs: "160px",
+          md: "200px",
+        }}
+        height={{
+          xs: "160px",
+          md: "200px",
+        }}
+        gap={2}
         alignItems={"center"}
       >
         <Typography color="var(--text-color)" fontSize={18}>
           {title}
         </Typography>
-        <div
-          style={{
-            width: "85px",
+        <Stack
+          sx={{
+            width: {
+              xs: "80px",
+              md: "85px",
+            },
             height: "85px",
             mask: `url(${img.src})`,
             "-webkit-mask": `url(${img.src})`,
             maskRepeat: "no-repeat",
+            maskSize: {
+              xs: "75px",
+              md: "100%",
+            },
           }}
-        ></div>
+        ></Stack>
       </Stack>
     </Link>
   );
