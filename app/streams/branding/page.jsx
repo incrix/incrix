@@ -6,6 +6,7 @@ import Metrics from "./components/Metrics";
 import Services from "./components/Services";
 import Studio from "./components/Studio";
 import LetsBuild from "./components/LetsBuild";
+import DigitalMarketing from "./components/DigitalMarketing";
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
       <Metrics />
       <Services />
       <Studio />
+      <DigitalMarketing />
       <LetsBuild />
     </Stack>
   );

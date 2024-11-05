@@ -1,6 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import toolBg from "@/public/assets/tool-bg.svg";
+import toolBg from "@/public/assets/tool-bg.png";
 import figma from "@/public/icons/tools/figma.png";
 import next from "@/public/icons/tools/next.png";
 import react from "@/public/icons/tools/react.png";

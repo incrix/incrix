@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { ThemeProvider } from "@mui/material";
 import theme from "@/components/Theme";
 import Footer from "@/components/Footer/Footer";
@@ -37,6 +37,18 @@ const centraleSans = localFont({
   weight: "200 300 400 500",
 });
 
+const smooch = localFont({
+  src: [
+    {
+      path: "../public/fonts/Smooch-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-smooch",
+  weight: "400",
+});
+
 export const metadata = {
   title: {
     default: "Incrix",
@@ -54,14 +66,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-        <body className={`${centraleSans.variable}`}>
+      <body className={`${centraleSans.variable} ${smooch.variable}`}>
         <AppRouterCacheProvider>
-        <ThemeProvider theme={theme}>
-        {children}
-        <Footer />
-        </ThemeProvider>
+          <ThemeProvider theme={theme}>
+            {children}
+            <Footer />
+          </ThemeProvider>
         </AppRouterCacheProvider>
-        </body>
+      </body>
     </html>
   );
 }
