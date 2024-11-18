@@ -154,7 +154,7 @@ export default function Footer() {
                       <Link href="/branding">+91 9786799765</Link>
                     </Stack>
                     <Typography variant="h6" sx={{ color: "var(--primary)" }}>
-                      WHERE WE ARE
+                      HERE WE ARE
                     </Typography>
                     <Typography
                       variant="body"
