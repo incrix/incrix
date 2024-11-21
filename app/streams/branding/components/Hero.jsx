@@ -31,22 +31,77 @@ export default function Hero() {
         <Stack
           maxWidth={"var(--max-width)"}
           width={"100%"}
-          gap={8}
-          alignItems={"center"}
+          gap={{
+            xs: 2,
+            sm: 4,
+            md: 8,
+            lg: 8,
+            xl: 8,
+          }}
+          alignItems={{
+            xs: "start",
+            sm: "start",
+            md: "center",
+            lg: "center",
+            xl: "center",
+          }}
           mb={20}
         >
           <Typography
             variant={"h1"}
-            fontSize={80}
+            fontSize={{
+              xs: 40,
+              sm: 60,
+              md: 60,
+              lg: 70,
+              xl: 80,
+            }}
             color="#282828"
             fontWeight={600}
-            textAlign={"center"}
+            textAlign={{
+              xs: "start",
+              sm: "start",
+              md: "center",
+              lg: "center",
+              xl: "center",
+            }}
           >
-            We build <font style={{ color: "var(--primary)" }}>Brands</font>{" "}
-            that
-            <br /> builds History
+            We build{" "}
+            <font
+              style={{
+                color: "var(--branding-gradient)",
+                background:
+                  "-webkit-linear-gradient(180deg, #580FE4 0%, #EE4B2B 100%)",
+                "-webkit-background-clip": "text",
+                "-webkit-text-fill-color": "transparent",
+              }}
+            >
+              Brands
+            </font>{" "}
+            that{" "}
+            <Stack
+              display={{
+                xs: "none",
+                sm: "none",
+                md: "block",
+                lg: "block",
+                xl: "block",
+              }}
+            ></Stack>
+            builds History
           </Typography>
-          <Typography variant={"h3"} fontSize={20} fontWeight={500}>
+          <Typography
+            variant={"h3"}
+            fontSize={20}
+            fontWeight={500}
+            textAlign={{
+              xs: "start",
+              sm: "start",
+              md: "center",
+              lg: "center",
+              xl: "center",
+            }}
+          >
             Your trusted partner for all your business solutions.
           </Typography>
         </Stack>

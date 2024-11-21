@@ -53,9 +53,10 @@ export default function PCB() {
           </Typography>
           <Stack  gap={4} flexWrap={"wrap"} alignItems={"center"}>
             <Stack
-              width={"var(--max-width)"}
-              height={600}
+              width={"1200px"}
+              height={500}
               position={"relative"}
+              margin={"30px"}
             >
               <TwinEdge />
                 <Typography fontSize={162} sx={{
@@ -130,7 +131,7 @@ const TwinEdge = () => {
       style={{
         width: "100%",
         height: "100%",
-        minHeight: "500px",
+        minHeight: "300px",
         backgroundColor: "transparent",
       }}
     >

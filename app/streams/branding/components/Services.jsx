@@ -17,33 +17,66 @@ export default function Services() {
         <Stack
           maxWidth={"var(--max-width)"}
           width={"100%"}
-          gap={10}
+          gap={{
+            xs: 4,
+            sm: 4,
+            md: 10,
+            lg: 10,
+            xl: 10,
+          }}
           alignItems={"center"}
           mb={20}
         >
           <Stack
             gap={4}
-            direction={"row"}
+            direction={{
+              xs: "column",
+              sm: "column",
+              md: "row",
+              lg: "row",
+              xl: "row",
+            }}
             width={"100%"}
-            maxWidth={"1300px"}
+            maxWidth={"1050px"}
             justifyContent={"space-between"}
             alignItems={"center"}
           >
             <Typography
               variant="h2"
               width={"100%"}
-              fontSize={40}
+              fontSize={{
+                xs: 28,
+                sm: 28,
+                md: 40,
+                lg: 40,
+                xl: 40,
+              }}
               fontWeight={500}
             >
               One stop solution for
               <br /> all your business needs!
             </Typography>
-            <Typography variant="body1" width={"100%"} fontSize={20}>
+            <Typography
+              variant="body1"
+              width={"100%"}
+              fontSize={{
+                xs: 16,
+                sm: 16,
+                md: 20,
+                lg: 20,
+                xl: 20,
+              }}
+            >
               We seamlessly operate across all our verticals, both independently
               and as an integrated partner, to deliver comprehensive solutions.
             </Typography>
           </Stack>
-          <Stack gap={4} direction={"row"} flexWrap={"wrap"}>
+          <Stack
+            gap={4}
+            direction={"row"}
+            justifyContent={"center"}
+            flexWrap={"wrap"}
+          >
             <Stack gap={4}>
               <ServiceCard
                 title={"Branding"}

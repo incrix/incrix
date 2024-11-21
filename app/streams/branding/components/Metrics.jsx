@@ -20,7 +20,13 @@ export default function Metrics() {
           gap={4}
           alignItems={"center"}
           mb={20}
-          direction={"row"}
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+            xl: "row",
+          }}
           flexWrap={"wrap"}
           justifyContent={"space-between"}
         >
@@ -55,12 +61,30 @@ const MetricCard = ({ title, description, years }) => {
   return (
     <Stack gap={4} width={300}>
       <Stack direction={"row"} gap={2} alignItems={"center"}>
-        <Typography fontSize={96}>{years}+</Typography>
-        <Typography fontSize={25} maxWidth={"600px"}>
+        <Typography fontSize={{
+          xs: 60,
+          sm: 60,
+          md: 90,
+          lg: 90,
+          xl: 90,
+        }}>{years}+</Typography>
+        <Typography fontSize={{
+          xs: 20,
+          sm: 20,
+          md: 25,
+          lg: 25,
+          xl: 25,
+        }} maxWidth={"600px"}>
           {title}
         </Typography>
       </Stack>
-      <Typography fontSize={20} maxWidth={"600px"}>
+      <Typography fontSize={{
+        xs: 18,
+        sm: 18,
+        md: 20,
+        lg: 20,
+        xl: 20,
+      }} maxWidth={"600px"}>
         {description}
       </Typography>
     </Stack>

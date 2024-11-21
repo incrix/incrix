@@ -32,7 +32,13 @@ export default function LetsBuild() {
             <Typography
               key={i}
               color="#707070"
-              fontSize={36}
+              fontSize={{
+                xs: 16,
+                sm: 16,
+                md: 16,
+                lg: 24,
+                xl: 24,
+              }}
               whiteSpace={"nowrap"}
               borderRight={"2px solid #707070"}
               padding={"0 40px"}
@@ -53,8 +59,20 @@ export default function LetsBuild() {
         }}
       >
         <Stack
-          width={"120px"}
-          height={"120px"}
+          width={{
+            xs: "80px",
+            sm: "100px",
+            md: "120px",
+            lg: "120px",
+            xl: "120px",
+          }}
+          height={{
+            xs: "80px",
+            sm: "100px",
+            md: "120px",
+            lg: "120px",
+            xl: "120px",
+          }}
           sx={{
             background: "var(--branding-gradient)",
             boxShadow: "0 0 20px rgba(0,0,0,0.5)",
@@ -93,7 +111,13 @@ export default function LetsBuild() {
           <Typography
             variant="h2"
             width={"100%"}
-            fontSize={110}
+            fontSize={{
+              xs: 40,
+              sm: 60,
+              md: 60,
+              lg: 110,
+              xl: 110,
+            }}
             textAlign={"center"}
           >
             Let&apos;s Build

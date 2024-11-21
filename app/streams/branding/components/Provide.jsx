@@ -22,7 +22,13 @@ export default function Provide() {
           gap={8}
           mb={20}
           bgcolor={"#E6E6E6"}
-          p={10}
+          p={{
+            xs: 4,
+            sm: 8,
+            md: 8,
+            lg: 10,
+            xl: 10,
+          }}
           borderRadius={"30px"}
           position={"relative"}
           zIndex={0}
@@ -36,13 +42,20 @@ export default function Provide() {
               bottom: "0",
               left: "0",
               height: "100%",
-              width: "70%",
+              width: "100%",
+              maxWidth: "500px"
             }}
           />
           <Stack
             direction={"row"}
             alignItems={"center"}
-            justifyContent={"space-between"}
+            justifyContent={{
+              xs: "center",
+              sm: "center",
+              md: "center",
+              lg: "space-between",
+              xl: "space-between",
+            }}
             gap={4}
             width={"100%"}
             maxWidth={"1300px"}
@@ -51,7 +64,22 @@ export default function Provide() {
           >
             <Stack gap={1}>
               <Typography fontSize={25}>What we provide,</Typography>
-              <Typography fontSize={20} maxWidth={"600px"}>
+              <Typography
+                fontSize={{
+                  xs: 16,
+                  sm: 18,
+                  md: 20,
+                  lg: 20,
+                  xl: 20,
+                }}
+                maxWidth={{
+                  xs: "100%",
+                  sm: "100%",
+                  md: "100%",
+                  lg: 500,
+                  xl: 500,
+                }}
+              >
                 From strategic brand development to advanced digital marketing
                 solutions, we amplify your presence across all platforms. Let us
                 craft your brand&apos;s story, engage your audience, and elevate
@@ -60,7 +88,15 @@ export default function Provide() {
                 with us to transform your vision into a powerful brand.
               </Typography>
             </Stack>
-            <Image src={provide} alt="provide" />
+            <Stack maxWidth={600}>
+              <Image
+                src={provide}
+                alt="provide"
+                style={{
+                  width: "100%",
+                }}
+              />
+            </Stack>
           </Stack>
         </Stack>
       </Stack>

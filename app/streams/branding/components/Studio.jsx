@@ -32,11 +32,27 @@ export default function Studio() {
             fontSize={16}
             fontWeight={400}
             textTransform={"uppercase"}
-            color="var(--primary)"
+            sx={{
+              background:
+                "-webkit-linear-gradient(180deg, #580FE4 0%, #EE4B2B 100%)",
+              "-webkit-background-clip": "text",
+              "-webkit-text-fill-color": "transparent",
+            }}
           >
             Creative studio in town
           </Typography>
-          <Typography variant="h4" fontSize={60} fontWeight={400}>
+          <Typography
+            variant="h4"
+            fontSize={{
+              xs: 32,
+              sm: 32,
+              md: 40,
+              lg: 60,
+              xl: 60,
+            }}
+            textAlign={"center"}
+            fontWeight={400}
+          >
             We Bring Stories to Life
           </Typography>
           <Stack
@@ -44,6 +60,7 @@ export default function Studio() {
             direction={"row"}
             flexWrap={"wrap"}
             alignItems={"center"}
+            justifyContent={"center"}
           >
             <StudioCard
               title={"Idea"}
