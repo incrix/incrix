@@ -1,6 +1,8 @@
 import { Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import brandingBg from "@/public/assets/branding-bg.png";
+import style from "./branding.module.css";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function Hero() {
   return (
@@ -8,12 +10,13 @@ export default function Hero() {
       <Image
         src={brandingBg}
         alt="branding-bg"
-        width={"100vw"}
         style={{
           position: "absolute",
           top: "0",
           left: "0",
           zIndex: -1,
+          width: "100%",
+          minWidth: "1000px",
         }}
       />
       <Stack
@@ -105,6 +108,10 @@ export default function Hero() {
             Your trusted partner for all your business solutions.
           </Typography>
         </Stack>
+      </Stack>
+      <Stack className={style.floating} alignItems={"center"}>
+        <Typography>Scroll</Typography>
+        <KeyboardArrowDownIcon />
       </Stack>
     </Stack>
   );
