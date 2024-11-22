@@ -26,13 +26,24 @@ export default function Service() {
           width={"100%"}
           mb={20}
           justifyContent={"center"}
-          alignItems={"center"}
+          alignItems={{
+            xs: "flex-start",
+            sm: "center",
+            md: "center",
+          }}
           gap={4}
         >
           <Typography variant={"h3"} fontSize={24} fontWeight={400}>
             What We Can Do
           </Typography>
-          <Typography variant={"h2"} fontSize={48} fontWeight={500}>
+          <Typography
+            variant={"h2"}
+            fontSize={{
+              xs: 36,
+              md: 48,
+            }}
+            fontWeight={500}
+          >
             <font
               style={{
                 color: "var(--primary)",
@@ -102,20 +113,48 @@ export default function Service() {
 const ServiceCard = ({ icon, title, desc }) => {
   return (
     <Stack
-      width={"40%"}
-      height={"350px"}
+      width={{
+        xs: "100%",
+        sm: "500px",
+        md: "600px",
+      }}
+      height={{
+        xs: "auto",
+        sm: "200px",
+        md: "350px",
+      }}
       justifyContent={"center"}
       gap={2}
       bgcolor={"#FFF9F6"}
-      p={4}
+      p={{
+        xs: 2,
+        sm: 4,
+      }}
       sx={{
         borderRadius: "30px",
       }}
     >
       <Stack direction={"row"} alignItems={"center"} gap={2}>
-        <Image src={icon} alt={title} width={100} height={100} />
+        <Stack
+          width={{
+            xs: 80,
+            sm: 100,
+          }}
+          height={{
+            xs: 80,
+            sm: 100,
+          }}
+        >
+          <Image src={icon} alt={title} style={{ width: "100%" }} />
+        </Stack>
         <Stack gap={2}>
-          <Typography variant={"h4"} fontSize={24}>
+          <Typography
+            variant={"h4"}
+            fontSize={{
+              xs: 20,
+              sm: 24,
+            }}
+          >
             {title}
           </Typography>
           <Typography

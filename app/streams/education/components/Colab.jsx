@@ -42,13 +42,28 @@ export default function Colab() {
           maxWidth={"var(--max-width)"}
           width={"100%"}
           gap={4}
-          mb={20}
+          mb={{
+            xs: 10,
+            sm: 20,
+          }}
           mt={20}
-          direction={"row"}
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "row",
+          }}
+          // flexWrap={"wrap"}
           justifyContent={"space-evenly"}
           alignItems={"center"}
         >
-          <Typography variant="h3" fontWeight={500} maxWidth={"600px"}>
+          <Typography variant="h3" fontSize={{
+            xs: 34,
+            sm: 48,
+          }} fontWeight={500} maxWidth={"600px"} textAlign={{
+            xs: "center",
+            sm: "center",
+
+          }}>
             We collaborate with leading{" "}
             <font style={{ color: "var(--education)", fontWeight: 600 }}>
               Institutions
@@ -70,8 +85,16 @@ export default function Colab() {
                   sx={{
                     bgcolor: " white",
                     borderRadius: "10px",
-                    width: "150px",
-                    height: "150px",
+                    width: {
+                      xs: "100px",
+                      sm: "150px",
+                      md: "150px",
+                    },
+                    height: {
+                      xs: "100px",
+                      sm: "150px",
+                      md: "150px",
+                    },
                     padding: "10px",
                     boxShadow: "0px 0px 20px 0px rgba(0,0,0,0.1)",
                   }}

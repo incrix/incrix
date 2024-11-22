@@ -35,32 +35,59 @@ export default function Hero() {
           maxWidth={"var(--max-width)"}
           width={"100%"}
           gap={4}
-          alignItems={"center"}
+          alignItems={{
+            xs: "flex-start",
+            md: "center",
+          }}
           mb={20}
           mt={30}
         >
-          <Typography variant={"p"} fontSize={14} textAlign={"center"}>
+          <Typography
+            variant={"p"}
+            fontSize={14}
+            textAlign={{
+              xs: "left",
+              md: "center",
+            }}
+          >
             Invest in your growth🔓—join a program that prepares you for the
             future of your industry.
           </Typography>
           <Typography
             variant={"h1"}
-            fontSize={80}
+            fontSize={{
+              xs: "48px",
+              sm: "52px",
+              md: "52px",
+              lg: "62px",
+              xl: "80px",
+            }}
             fontWeight={500}
-            textAlign={"center"}
+            textAlign={{
+              xs: "left",
+              md: "center",
+            }}
           >
-            Invest in Tomorrow with
-            <br />
+            Invest in Tomorrow with{" "}
+            <Stack
+              display={{
+                xs: "none",
+                md: "block",
+              }}
+            ></Stack>
             <font style={{ color: "var(--education)", fontWeight: 600 }}>
               Future
-            </font>
+            </font>{" "}
             Technologies
           </Typography>
           <Typography
             variant={"body"}
             fontSize={16}
             fontWeight={500}
-            textAlign={"center"}
+            textAlign={{
+              xs: "left",
+              md: "center",
+            }}
             maxWidth={"700px"}
           >
             Our education solutions are meticulously designed to meet your
@@ -89,10 +116,12 @@ export default function Hero() {
         </Stack>
       </Stack>
       <Stat />
-      <hr style={{
-        backgroundColor: "none",
-        border: "1px solid #EDEDED",
-      }}/>
+      {/* <hr
+        style={{
+          backgroundColor: "none",
+          border: "1px solid #EDEDED",
+        }}
+      /> */}
     </Stack>
   );
 }

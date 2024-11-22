@@ -17,17 +17,24 @@ export default function Stat() {
       >
         <Stack
           width={"100%"}
-          gap={15}
+          gap={{
+            xs: 4,
+            md: 15,
+          }}
           direction={"row"}
+          // flexWrap={"wrap"}
           alignItems={"center"}
           justifyContent={"center"}
           mb={10}
-        //   mt={20}
+          //   mt={20}
         >
           <Stack>
             <Typography
               variant={"h1"}
-              fontSize={50}
+              fontSize={{
+                xs: 28,
+                sm: 50,
+              }}
               fontWeight={600}
               color="var(--education)"
             >
@@ -43,7 +50,10 @@ export default function Stat() {
             </Typography>
             <Typography
               variant={"p"}
-              fontSize={22}
+              fontSize={{
+                xs: 20,
+                sm: 22,
+              }}
               fontWeight={700}
               color="var(--text-color)"
             >
@@ -53,7 +63,10 @@ export default function Stat() {
           <Stack>
             <Typography
               variant={"h1"}
-              fontSize={50}
+              fontSize={{
+                xs: 28,
+                sm: 50,
+              }}
               fontWeight={600}
               color="var(--education)"
             >
@@ -68,7 +81,10 @@ export default function Stat() {
             </Typography>
             <Typography
               variant={"p"}
-              fontSize={22}
+              fontSize={{
+                xs: 20,
+                sm: 22,
+              }}
               fontWeight={700}
               color="var(--text-color)"
             >
@@ -78,7 +94,10 @@ export default function Stat() {
           <Stack>
             <Typography
               variant={"h1"}
-              fontSize={50}
+              fontSize={{
+                xs: 28,
+                sm: 50,
+              }}
               fontWeight={600}
               color="var(--education)"
             >
@@ -93,7 +112,10 @@ export default function Stat() {
             </Typography>
             <Typography
               variant={"p"}
-              fontSize={22}
+              fontSize={{
+                xs: 20,
+                sm: 22,
+              }}
               fontWeight={700}
               color="var(--text-color)"
             >

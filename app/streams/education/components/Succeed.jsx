@@ -16,8 +16,8 @@ export default function Succeed() {
           lg: "var(--dd-side-padding)",
           xl: "var(--dd-side-padding)",
         }}
-        alignItems={"center"}
         justifyContent={"center"}
+        alignItems={"center"}
       >
         <Stack
           maxWidth={"var(--max-width)"}
@@ -26,12 +26,44 @@ export default function Succeed() {
           mb={20}
           alignItems={"center"}
         >
-          <Stack gap={1} direction={"row"} alignItems={"center"}>
-            <Typography fontSize={38} fontWeight={500} color="#6E6E6F">
+          <Stack
+            gap={1}
+            direction={{
+              xs: "column",
+              sm: "row",
+            }}
+            alignItems={{
+              xs: "flex-start",
+              sm: "center",
+            }}
+            justifyContent={{
+              xs: "flex-start",
+              sm: "center",
+            }}
+            width={"100%"}
+            textAlign={{
+              xs: "left",
+              sm: "center",
+              md: "center",
+              lg: "center",
+              xl: "center",
+            }}
+          >
+            <Typography
+              fontSize={{
+                xs: 22,
+                sm: 38,
+              }}
+              fontWeight={500}
+              color="#6E6E6F"
+            >
               Want to join
             </Typography>
             <Typography
-              fontSize={80}
+              fontSize={{
+                xs: 64,
+                sm: 80,
+              }}
               fontFamily={"var(--font-smooch)"}
               color="var(--education)"
             >
@@ -44,7 +76,10 @@ export default function Succeed() {
             fontSize={18}
             color="#6E6E6E"
             fontWeight={400}
-            textAlign={"center"}
+            textAlign={{
+              xs: "left",
+              sm: "center",
+            }}
             maxWidth={"780px"}
             lineHeight={"30px"}
           >

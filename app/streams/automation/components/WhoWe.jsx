@@ -21,23 +21,48 @@ export default function WhoWe() {
           maxWidth={"var(--max-width)"}
           width={"100%"}
           mb={20}
-          direction={"row"}
+          direction={{
+            xs: "column",
+            md: "row",
+          }}
           justifyContent={"center"}
           alignItems={"center"}
+          gap={0}
         >
-          <Image
-            src={whowe}
-            alt="Who We Are"
-            // layout="responsive"
-            quality={100}
-            height={500}
-          />
+          <Stack
+            sx={{
+              transform: {
+                xs: "rotate(90deg)",
+                md: "none",
+              },
+              // height: {
+              //   xs: "300px",
+              //   md: "500px",
+              // },
+              // width: {
+              //   xs: "500px",
+              //   md: "300px",
+              // },
+            }}
+          >
+            <Image
+              src={whowe}
+              alt="Who We Are"
+              // layout="responsive"
+              quality={100}
+              height={"100%"}
+              width={"100%"}
+            />
+          </Stack>
           <Stack
             gap={2}
             width={"100%"}
             maxWidth={"800px"}
-            height={"600px"}
-            p={"30px 50px"}
+            minHeight={"600px"}
+            p={{
+              xs: 2,
+              md: "30px 50px",
+            }}
             sx={{
               background: "linear-gradient(0deg, #F7F7F7, #fff)",
               border: "2px solid #FFF6F3",
@@ -48,10 +73,23 @@ export default function WhoWe() {
             <Typography variant="h1" fontSize={16} fontWeight={400}>
               Who We Are
             </Typography>
-            <Typography variant="p" fontSize={48} fontWeight={500}>
-              Delivering <font style={{
-                color: "var(--primary)",
-              }}>Automation Excellence</font> with Expert Solutions
+            <Typography
+              variant="p"
+              fontSize={{
+                xs: 28,
+                md: 48,
+              }}
+              fontWeight={500}
+            >
+              Delivering{" "}
+              <font
+                style={{
+                  color: "var(--primary)",
+                }}
+              >
+                Automation Excellence
+              </font>{" "}
+              with Expert Solutions
             </Typography>
 
             <Typography variant="p" fontSize={16} lineHeight={2}>

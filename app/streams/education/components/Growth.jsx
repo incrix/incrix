@@ -33,7 +33,13 @@ export default function Growth() {
             alignItems={"center"}
           >
             <Stack
-              direction={"row"}
+              direction={{
+                xs: "column",
+                sm: "column",
+                md: "column",
+                lg: "row",
+                xl: "row",
+              }}
               gap={10}
               width={"100%"}
               maxWidth={"1200px"}
@@ -82,10 +88,19 @@ export default function Growth() {
               <Stack
                 width={"100%"}
                 height={"100%"}
-                direction={"row"}
+                direction={{
+                  xs: "column",
+                  sm: "row",
+                  md: "row",
+                  lg: "row",
+                  xl: "row",
+                }}
                 alignItems={"center"}
                 justifyContent={"center"}
-                gap={"250px"}
+                gap={{
+                  xs: 10,
+                  sm: "250px",
+                }}
               >
                 <Stack
                   zIndex={0}
@@ -104,10 +119,37 @@ export default function Growth() {
                   >
                     <Image src={education} alt="education" />
                     <Stack
+                      position={"absolute"}
+                      sx={{
+                        top: "100%",
+                        left: "50%",
+                      }}
+                      display={{
+                        xs: "block",
+                        sm: "none",
+                      }}
+                    >
+                      <hr
+                        style={{
+                          width: "1px",
+                          height: "100px",
+                          borderTop: "2px dashed #D6DAE4 !important",
+                        }}
+                      />
+                    </Stack>
+                    <Stack
                       zIndex={10}
                       direction={"row"}
                       alignItems={"center"}
                       position={"absolute"}
+                      // display={{
+                      //   xs: "none",
+                      //   sm: "inline",
+                      // }}
+                      visibility={{
+                        xs: "hidden",
+                        sm: "visible",
+                      }}
                       sx={{
                         top: "50%",
                         right: 0,
@@ -134,6 +176,10 @@ export default function Growth() {
                     height={"400px"}
                     position={"absolute"}
                     bgcolor={"#EBF5FF"}
+                    display={{
+                      xs: "none",
+                      md: "block",
+                    }}
                     borderRadius={"50%"}
                     zIndex={-1}
                     sx={{
@@ -148,6 +194,10 @@ export default function Growth() {
                     position={"absolute"}
                     bgcolor={"#DFEFFF"}
                     borderRadius={"50%"}
+                    display={{
+                      xs: "none",
+                      md: "block",
+                    }}
                     sx={{
                       top: "50%",
                       left: "50%",
@@ -159,6 +209,10 @@ export default function Growth() {
                     height={"150px"}
                     position={"absolute"}
                     bgcolor={"#EFF9FF"}
+                    display={{
+                      xs: "none",
+                      md: "block",
+                    }}
                     borderRadius={"50%"}
                     sx={{
                       top: "50%",
@@ -203,6 +257,10 @@ const GrowCard = ({ title, icon }) => {
       </Typography>
       <Stack
         position={"absolute"}
+        display={{
+          xs: "none",
+          md: "block",
+        }}
         sx={{
           top: "50%",
           left: 0,

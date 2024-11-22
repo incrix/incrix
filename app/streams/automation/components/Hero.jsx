@@ -16,6 +16,15 @@ export default function Hero() {
         layout="fill"
         objectFit="cover"
         quality={0}
+        style={{
+          position: "absolute",
+          zIndex: -1,
+          top: 0,
+          left: 10,
+          width: "100%",
+          height: "100%",
+          minWidth: "2000px",
+        }}
       />
       <Stack
         position={"absolute"}
@@ -49,15 +58,38 @@ export default function Hero() {
             md: 4,
           }}
           mb={20}
-          textAlign={"center"}
+          textAlign={{
+            xs: "left",
+            md: "center",
+          }}
           zIndex={1}
         >
-          <Typography variant="p" fontSize={20}>
+          <Typography
+            variant="p"
+            fontSize={{
+              xs: 16,
+              md: 20,
+            }}
+          >
             With automation, the future is not just bright; it’s dazzling ⚡!
           </Typography>
-          <Typography variant={"h1"} fontSize={64} fontWeight={500}>
+          <Typography
+            variant={"h1"}
+            fontSize={{
+              xs: 48,
+              md: 64,
+            }}
+            fontWeight={500}
+          >
             Where <font style={{ color: "var(--primary)" }}>Automation</font>{" "}
-            Meets <br /> Innovative Solutions
+            Meets{" "}
+            <Stack
+              display={{
+                xs: "none",
+                md: "block",
+              }}
+            ></Stack>{" "}
+            Innovative Solutions
           </Typography>
         </Stack>
       </Stack>

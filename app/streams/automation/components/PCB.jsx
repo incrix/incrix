@@ -10,6 +10,8 @@ import {
 } from "@react-three/drei";
 import TWIN from "@/public/3d/TWIN1";
 import { useEffect } from "react";
+import { useRef } from "react";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 export default function PCB() {
   return (
@@ -51,7 +53,7 @@ export default function PCB() {
           >
             Our Innovation Journey
           </Typography>
-          <Stack  gap={4} flexWrap={"wrap"} alignItems={"center"}>
+          <Stack gap={4} flexWrap={"wrap"} alignItems={"center"}>
             <Stack
               width={"1200px"}
               height={500}
@@ -59,7 +61,9 @@ export default function PCB() {
               margin={"30px"}
             >
               <TwinEdge />
-                <Typography fontSize={162} sx={{
+              <Typography
+                fontSize={162}
+                sx={{
                   position: "absolute",
                   top: "30%",
                   left: "50%",
@@ -68,7 +72,10 @@ export default function PCB() {
                   fontWeight: 600,
                   zIndex: -1,
                   textWrap: "nowrap",
-                }}>Twin Edge Dev v1</Typography>
+                }}
+              >
+                Twin Edge Dev v1
+              </Typography>
             </Stack>
 
             <Stack
@@ -77,7 +84,7 @@ export default function PCB() {
               p={4}
               sx={{
                 width: "500px",
-                height: "600px",
+                height: "300px",
                 borderRadius: "10px",
               }}
             >
@@ -114,17 +121,34 @@ export default function PCB() {
 
 const TwinEdge = () => {
   const [cameraPosition, setCameraPosition] = useState([0, 30, 0]);
+  const [isActive, setIsActive] = useState(false);
+  const element = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: element,
+  });
   useEffect(() => {
-    setInterval(() => {
-      setCameraPosition((prev) => {
-        if (prev[0] > 10) {
-          return prev;
-        }
-        return [prev[0] + 0.0333, prev[1], prev[2] + 0.1];
-      });
+    scrollYProgress.onChange((latest) => {
+      console.log(latest);
+      if (latest < 0.4 && !isActive) {
+        setIsActive(true);
+      } else if (latest > 0.4 && isActive) {
+        setIsActive(false);
+      }
+    });
+  });
+
+  useEffect(() => {
+    if (isActive) {
+      setInterval(() => {
+        setCameraPosition((prev) => {
+          if (prev[0] > 10) {
+            return prev;
+          }
+          return [prev[0] + 0.0333, prev[1], prev[2] + 0.1];
+        });
+      }, 1);
     }
-    , 10);
-  }, []);
+  }, [isActive]);
 
   return (
     <Canvas
@@ -134,6 +158,7 @@ const TwinEdge = () => {
         minHeight: "300px",
         backgroundColor: "transparent",
       }}
+      ref={element}
     >
       <PerspectiveCamera makeDefault position={cameraPosition} fov={15} />
       <ambientLight intensity={1.5} />

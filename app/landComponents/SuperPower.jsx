@@ -1,6 +1,6 @@
 "use client";
 import { Stack, Typography } from "@mui/material";
-import { use, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 
 export default function SuperPower() {

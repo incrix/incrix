@@ -29,9 +29,14 @@ export default function Product() {
         >
           <Stack
             gap={2}
-            direction={"row"}
+            direction={{
+              xs: "column",
+              lg: "row",
+            }}
+            // flexWrap={"wrap"}
             width={"100%"}
             justifyContent={"space-between"}
+            alignItems={"center"}
           >
             <Stack gap={2} maxWidth={600}>
               <Typography variant={"h3"} fontSize={16} fontWeight={300}>

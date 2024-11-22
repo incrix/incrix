@@ -30,9 +30,23 @@ export default function TechCourse() {
           mb={20}
           alignItems={"center"}
         >
-          <Typography fontSize={38} fontWeight={500} textAlign={"center"} color="#6E6E6F">
+          <Typography
+            fontSize={{
+              xs: 28,
+              sm: 38,
+            }}
+            fontWeight={500}
+            textAlign={"center"}
+            color="#6E6E6F"
+          >
             Master your skills with
-            <br /> Incrix Education -
+            <Stack
+              display={{
+                xs: "none",
+                md: "block",
+              }}
+            ></Stack>{" "}
+            Incrix Education -
             <font
               style={{
                 color: "var(--education)",

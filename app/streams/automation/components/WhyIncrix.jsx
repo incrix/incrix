@@ -23,11 +23,22 @@ export default function WhyIncrix() {
           maxWidth={"var(--max-width)"}
           width={"100%"}
           mb={20}
-          direction={"row"}
+          direction={{
+            xs: "column",
+            lg: "row",
+          }}
           justifyContent={"center"}
+          alignItems={"center"}
           gap={6}
         >
-          <Stack gap={2}>
+          <Stack
+            gap={2}
+            alignItems={{
+              xs: "flex-start",
+              md: "center",
+              lg: "flex-start",
+            }}
+          >
             <Typography variant={"h3"} fontSize={24} fontWeight={400}>
               Why Choose Us
             </Typography>
@@ -37,19 +48,43 @@ export default function WhyIncrix() {
                 Incrix Automation?
               </font>
             </Typography>
-            <Typography variant={"p"} fontSize={20} mt={5} color="#999">
-              Every business is unique, and so are our <br /> solutions. We
-              tailor automation strategies to <br /> meet your specific needs.
+            <Typography
+              variant={"p"}
+              fontSize={20}
+              textAlign={{
+                xs: "left",
+                md: "center",
+                lg: "left",
+              }}
+              mt={5}
+              color="#999"
+            >
+              Every business is unique, and so are our{" "}
+              <Stack
+                display={{
+                  xs: "none",
+                  md: "block",
+                }}
+              ></Stack>{" "}
+              solutions. We tailor automation strategies to{" "}
+              <Stack
+                display={{
+                  xs: "none",
+                  md: "block",
+                }}
+              ></Stack>{" "}
+              meet your specific needs.
             </Typography>
             <Image
               src={incrixAuto}
               alt="Incrix Automation"
               style={{
                 marginTop: "50px",
+                width: "100%",
               }}
             />
           </Stack>
-          <Stack gap={3}>
+          <Stack gap={3} alignItems={"flex-start"}>
             <Card
               title="Tailored Solutions"
               description="Custom automation designed for your needs, ensuring peak performance."
@@ -93,10 +128,24 @@ const Card = ({ title, description }) => {
       >
         <Image src={cpu} alt="CPU" />
         <Stack gap={2}>
-          <Typography variant={"h4"} fontSize={24} fontWeight={500}>
+          <Typography
+            variant={"h4"}
+            fontSize={{
+              xs: 20,
+              sm: 24,
+            }}
+            fontWeight={500}
+          >
             {title}
           </Typography>
-          <Typography variant={"p"} fontSize={20} color="#999">
+          <Typography
+            variant={"p"}
+            fontSize={{
+              xs: 16,
+              sm: 20,
+            }}
+            color="#999"
+          >
             {description}
           </Typography>
         </Stack>

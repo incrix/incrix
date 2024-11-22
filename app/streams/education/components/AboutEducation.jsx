@@ -27,13 +27,17 @@ export default function AboutEducation() {
           gap={4}
           mb={20}
           direction={"row"}
+          flexWrap={"wrap"}
           justifyContent={"space-evenly"}
           alignItems={"center"}
         >
           <Stack gap={2}>
             <Typography
               variant={"h2"}
-              fontSize={38}
+              fontSize={{
+                xs: 28,
+                sm: 38,
+              }}
               color="#6E6E6E"
               fontWeight={500}
             >
@@ -42,7 +46,15 @@ export default function AboutEducation() {
                 Incrix Education
               </font>
             </Typography>
-            <Typography variant={"p"} fontSize={20} maxWidth={600}>
+            <Typography
+              variant={"p"}
+              fontSize={{
+                xs: 16,
+                sm: 20,
+              }}
+              width={"100%"}
+              maxWidth={600}
+            >
               Develop a forward-thinking startup ecosystem founded on science
               and technology, fostering sustainable growth. Empower innovators,
               cultivate tech startups, and strategically guide their success in
@@ -52,7 +64,15 @@ export default function AboutEducation() {
               <Typography variant={"h2"} fontSize={20} fontWeight={500}>
                 Who we are,
               </Typography>
-              <Typography variant={"p"} fontSize={20} width={600}>
+              <Typography
+                variant={"p"}
+                fontSize={{
+                  xs: 16,
+                  sm: 20,
+                }}
+                width={"100%"}
+                maxWidth={600}
+              >
                 Incrix is a team of like-minded enthusiasts driven by equity,
                 dignity, and delivering quality solutions in a fair and
                 effective manner.
@@ -89,7 +109,10 @@ export default function AboutEducation() {
               <AboutCard
                 icon={
                   <PaymentsIcon
-                    sx={{ fontSize: 50, fill: "var(--education)" }}
+                    sx={{ fontSize: {
+                      xs: 24,
+                      sm: 50,
+                    }, fill: "var(--education)" }}
                   />
                 }
                 title={"Affordable Price"}
@@ -100,7 +123,10 @@ export default function AboutEducation() {
               <AboutCard
                 icon={
                   <PolylineIcon
-                    sx={{ fontSize: 50, fill: "var(--education)" }}
+                    sx={{ fontSize: {
+                      xs: 24,
+                      sm: 50,
+                    }, fill: "var(--education)" }}
                   />
                 }
                 title={"Cutting-Edge Technologies"}
@@ -113,7 +139,10 @@ export default function AboutEducation() {
               <AboutCard
                 icon={
                   <BusinessIcon
-                    sx={{ fontSize: 50, fill: "var(--education)" }}
+                    sx={{ fontSize: {
+                      xs: 24,
+                      sm: 50,
+                    }, fill: "var(--education)" }}
                   />
                 }
                 title={"Startup Mastery"}
@@ -124,7 +153,10 @@ export default function AboutEducation() {
               <AboutCard
                 icon={
                   <MilitaryTechIcon
-                    sx={{ fontSize: 50, fill: "var(--education)" }}
+                    sx={{ fontSize: {
+                      xs: 24,
+                      sm: 50,
+                    }, fill: "var(--education)" }}
                   />
                 }
                 title={"Credibility"}
@@ -144,8 +176,14 @@ const AboutCard = ({ icon, title, description }) => {
   return (
     <Stack
       gap={1}
-      width={"200px"}
-      height={"200px"}
+      width={{
+        xs: "150px",
+        sm: "200px",
+      }}
+      height={{
+        xs: "150px",
+        sm: "200px",
+      }}
       bgcolor={"#F6F9FF"}
       p={2}
       borderRadius={5}
@@ -163,10 +201,16 @@ const AboutCard = ({ icon, title, description }) => {
       }}
     >
       {icon}
-      <Typography variant={"h4"} fontSize={16} fontWeight={600}>
+      <Typography variant={"h4"} fontSize={{
+        xs: 14,
+        sm: 16,
+      }} fontWeight={600}>
         {title}
       </Typography>
-      <Typography variant={"p"} fontSize={14}>
+      <Typography variant={"p"} fontSize={{
+        xs: 10,
+        sm: 14,
+      }}>
         {description}
       </Typography>
     </Stack>
