@@ -159,7 +159,10 @@ const ServiceCard = ({ icon, title, desc }) => {
           </Typography>
           <Typography
             variant={"p"}
-            maxWidth={400}
+            maxWidth={{
+              xs: "100%",
+              sm: 400,
+            }}
             fontSize={16}
             color="#999999"
             mr={10}

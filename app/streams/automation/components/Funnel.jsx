@@ -41,7 +41,10 @@ export default function Funnel() {
         >
           <Typography
             variant={"h3"}
-            fontSize={48}
+            fontSize={{
+              xs: 36,
+              md: 48,
+            }}
             fontWeight={500}
             textAlign={"center"}
           >
@@ -60,20 +63,35 @@ export default function Funnel() {
               />
             </svg>{" "}
             in Days.
-            <br /> Optimize in Minutes{" "}
+            <Stack
+              display={{
+                xs: "none",
+                sm: "block",
+              }}
+            />{" "}
+            Optimize in Minutes{" "}
             <HistoryIcon
               sx={{ fill: "black", fillOpacity: "0.7", fontSize: "30px" }}
             />
           </Typography>
           <Typography
             variant={"p"}
-            fontSize={24}
+            fontSize={{
+              xs: 20,
+              md: 24,
+            }}
             fontWeight={400}
             textAlign={"center"}
             color="#999"
           >
-            From Smart Homes to Smart Factories: Lighting <br /> the Way with
-            Intelligent Automation
+            From Smart Homes to Smart Factories: Lighting{" "}
+            <Stack
+              display={{
+                xs: "none",
+                sm: "block",
+              }}
+            />{" "}
+            the Way with Intelligent Automation
           </Typography>
           <Link href="/contact">
             <Button

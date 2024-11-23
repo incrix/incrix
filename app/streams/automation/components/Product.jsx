@@ -42,11 +42,17 @@ export default function Product() {
               <Typography variant={"h3"} fontSize={16} fontWeight={300}>
                 Product
               </Typography>
-              <Typography variant={"h2"} fontSize={48} fontWeight={500}>
+              <Typography variant={"h2"} fontSize={{
+                xs: 36,
+                lg: 48,
+              }} fontWeight={500}>
                 Our <font style={{ color: "var(--primary)" }}>Smart Home</font>{" "}
                 Solutions
               </Typography>
-              <Typography variant={"p"} fontSize={20} mt={5} color="#999">
+              <Typography variant={"p"} fontSize={20} mt={{
+                xs: 0,
+                lg: 5,
+              }} color="#999">
                 Dive into a world of exceptional entertainment, fortified
                 security, effortless control, and intelligent monitoring—all at
                 your fingertips. Embrace seamless connectivity and discover the
@@ -60,11 +66,13 @@ export default function Product() {
                 alt="Smart Home"
                 style={{
                   borderRadius: "8px",
+                  width: "100%",
+                  objectFit: "cover",
                 }}
               />
             </Stack>
           </Stack>
-          <Stack direction={"row"} flexWrap={"wrap"} gap={5}>
+          <Stack direction={"row"} justifyContent={"center"} flexWrap={"wrap"} gap={5}>
             <Card
               icon={
                 <IntegrationInstructionsIcon sx={{ fill: "var(--primary)" }} />

@@ -32,7 +32,7 @@ export default function HowWeWork() {
           >
             How We Work
           </Typography>
-          <Typography variant={"h2"} fontSize={40} fontWeight={500}>
+          <Typography variant={"h2"} fontSize={40} fontWeight={500} textAlign={"center"}>
             Delivering Perfection Through{" "}
             <font
               style={{
@@ -46,6 +46,10 @@ export default function HowWeWork() {
             width={"600px"}
             height={"600px"}
             mt={5}
+            display={{
+              xs: "none",
+              sm: "flex",
+            }}
             justifyContent={"center"}
             alignItems={"center"}
             bgcolor={"#FFF8F5"}

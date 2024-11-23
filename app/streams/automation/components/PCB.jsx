@@ -11,9 +11,13 @@ import {
 import TWIN from "@/public/3d/TWIN1";
 import { useEffect } from "react";
 import { useRef } from "react";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { useScroll } from "framer-motion";
+import useWindowSize from "@/lib/useWindowSize";
 
 export default function PCB() {
+  const { width } = useWindowSize();
+  console.log(width);
+
   return (
     <Stack>
       <Stack
@@ -47,7 +51,10 @@ export default function PCB() {
           </Typography>
           <Typography
             variant={"h5"}
-            fontSize={48}
+            fontSize={{
+              xs: 36,
+              md: 48,
+            }}
             fontWeight={500}
             textAlign={"center"}
           >
@@ -55,14 +62,26 @@ export default function PCB() {
           </Typography>
           <Stack gap={4} flexWrap={"wrap"} alignItems={"center"}>
             <Stack
-              width={"1200px"}
-              height={500}
+              width={{
+                xs: `${width - 40}px`,
+                md: "1200px",
+              }}
+              height={{
+                xs: "300px",
+                md: "500px",
+              }}
               position={"relative"}
               margin={"30px"}
             >
               <TwinEdge />
               <Typography
-                fontSize={162}
+                fontSize={{
+                  xs: 40,
+                  sm: 80,
+                  md: 100,
+                  lg: 120,
+                  xl: 162,
+                }}
                 sx={{
                   position: "absolute",
                   top: "30%",
@@ -83,7 +102,10 @@ export default function PCB() {
               bgcolor={"#FFF8F5"}
               p={4}
               sx={{
-                width: "500px",
+                width: {
+                  xs: `${width - 40}px`,
+                  sm: "500px",
+                },
                 height: "300px",
                 borderRadius: "10px",
               }}
@@ -128,7 +150,6 @@ const TwinEdge = () => {
   });
   useEffect(() => {
     scrollYProgress.onChange((latest) => {
-      console.log(latest);
       if (latest < 0.4 && !isActive) {
         setIsActive(true);
       } else if (latest > 0.4 && isActive) {

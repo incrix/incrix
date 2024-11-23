@@ -24,9 +24,23 @@ export default function Integrations() {
           maxWidth={"1200px"}
           width={"100%"}
           mb={20}
-          gap={3}
+          gap={{
+            xs: 10,
+            lg: 3,
+          }}
           direction={"row"}
-          justifyContent={"space-between"}
+          alignItems={{
+            xs: "center",
+            lg: "flex-start",
+          }}
+          flexWrap={{
+            xs: "wrap-reverse",
+            md: "nowrap",
+          }}
+          justifyContent={{
+            xs: "center",
+            lg: "space-between",
+          }}
         >
           <Stack maxWidth={900} gap={3}>
             <Stack maxWidth={600}>
@@ -38,7 +52,10 @@ export default function Integrations() {
               >
                 Integrations
               </Typography>
-              <Typography variant={"h2"} fontSize={48} fontWeight={500}>
+              <Typography variant={"h2"} fontSize={{
+                xs: 38,
+                lg: 48,
+              }} fontWeight={500}>
                 Powerful designs for working smarter
               </Typography>
               <Typography variant={"p"} fontSize={20} mt={5} color="#999">
@@ -64,7 +81,10 @@ export default function Integrations() {
               />
             </Stack>
           </Stack>
-          <Image src={integration} alt="Integration" />
+          <Image src={integration} alt="Integration" style={{
+            width: "100%",
+            objectFit: "contain",
+          }} />
         </Stack>
       </Stack>
     </Stack>
