@@ -1,4 +1,9 @@
 import { Stack, Typography } from "@mui/material";
+import Image from "next/image";
+import consultation from "@/public/icons/automation/consultation.svg";
+import design from "@/public/icons/automation/design.svg";
+import implementation from "@/public/icons/automation/implementation.svg";
+import prototyping from "@/public/icons/automation/prototyping.svg";
 
 export default function HowWeWork() {
   return (
@@ -32,7 +37,15 @@ export default function HowWeWork() {
           >
             How We Work
           </Typography>
-          <Typography variant={"h2"} fontSize={40} fontWeight={500} textAlign={"center"}>
+          <Typography
+            variant={"h2"}
+            fontSize={{
+              xs: 36,
+              md: 48,
+            }}
+            fontWeight={500}
+            textAlign={"center"}
+          >
             Delivering Perfection Through{" "}
             <font
               style={{
@@ -96,12 +109,14 @@ export default function HowWeWork() {
                 description="We define the best automation strategy"
                 align="flex-end"
                 justify={"flex-start"}
+                icon={consultation}
               />
               <Card
                 title="Build"
                 number="02"
                 description="We craft tailored solutions for you"
                 align="flex-start"
+                icon={design}
               />
 
               <Card
@@ -109,12 +124,57 @@ export default function HowWeWork() {
                 number="03"
                 description="We test prototypes to ensure perfection"
                 align="flex-end"
+                icon={implementation}
               />
               <Card
                 title="Deploy"
                 number="04"
                 description="We implement the solution for seamless operation"
                 align="flex-start"
+                icon={prototyping}
+              />
+            </Stack>
+          </Stack>
+          <Stack
+            display={{
+              xs: "block",
+              sm: "none",
+            }}
+          >
+            <Stack
+              direction={"row"}
+              flexWrap={"wrap"}
+              gap={4}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              <Card
+                title="Consult"
+                number="01"
+                description="We define the best automation strategy"
+                align="flex-end"
+                icon={consultation}
+              />
+              <Card
+                title="Build"
+                number="02"
+                description="We craft tailored solutions for you"
+                align="flex-start"
+                icon={design}
+              />
+              <Card
+                title="Test"
+                number="03"
+                description="We test prototypes to ensure perfection"
+                align="flex-end"
+                icon={implementation}
+              />
+              <Card
+                title="Deploy"
+                number="04"
+                description="We implement the solution for seamless operation"
+                align="flex-start"
+                icon={prototyping}
               />
             </Stack>
           </Stack>
@@ -124,15 +184,24 @@ export default function HowWeWork() {
   );
 }
 
-const Card = ({ title, number, description, align, justify }) => {
+const Card = ({ title, number, description, align, icon }) => {
   return (
     <Stack alignItems={align} width={"200px"} height={"150px"}>
       <Typography variant={"h3"} fontSize={30} fontWeight={500}>
         {title}
       </Typography>
-      <Typography variant={"p"} fontSize={64} color="#FCDBD5" fontWeight={500}>
-        {number}
-      </Typography>
+      <Stack direction={"row"} alignItems={"center"} gap={1}>
+        {align === "flex-start" && <Image src={icon} alt={title} />}
+        <Typography
+          variant={"p"}
+          fontSize={64}
+          color="#FCDBD5"
+          fontWeight={500}
+        >
+          {number}
+        </Typography>
+        {align === "flex-end" && <Image src={icon} alt={title} />}
+      </Stack>
       <Typography variant={"p"} fontSize={16} color="#999">
         {description}
       </Typography>
