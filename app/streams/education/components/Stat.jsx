@@ -26,7 +26,10 @@ export default function Stat() {
           alignItems={"center"}
           justifyContent={"center"}
           mb={10}
-          //   mt={20}
+          mt={{
+            xs: "40px",
+            md: "0"
+          }}
         >
           <Stack>
             <Typography

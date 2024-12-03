@@ -6,6 +6,7 @@ import GetStarted from "./components/GetStarted";
 import OurExpertise from "./components/OurExpertise";
 import Approach from "./components/Approach";
 import ToolTech from "./components/ToolTech";
+import Footer from "@/components/Footer/Footer";
 
 export default function Page() {
   return (
@@ -17,6 +18,7 @@ export default function Page() {
       <Approach />
       <ToolTech />
       <Funnel />
+      <Footer isGradient={"var(--software-gradient)"} />
     </Stack>
   );
 }

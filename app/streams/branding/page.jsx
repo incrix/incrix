@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import Studio from "./components/Studio";
 import LetsBuild from "./components/LetsBuild";
 import DigitalMarketing from "./components/DigitalMarketing";
+import Footer from "@/components/Footer/Footer";
 
 export default function Page() {
   return (
@@ -19,6 +20,7 @@ export default function Page() {
       <Studio />
       <DigitalMarketing />
       <LetsBuild />
+      <Footer isGradient={"var(--branding-gradient)"} />
     </Stack>
   );
 }

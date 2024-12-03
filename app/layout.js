@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

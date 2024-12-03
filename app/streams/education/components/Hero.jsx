@@ -1,24 +1,74 @@
 import { Stack, Typography, Button } from "@mui/material";
 import Image from "next/image";
-import eduBg from "@/public/assets/edu-bg.png";
 import Stat from "./Stat";
+import eduBgGrid from "@/public/assets/edu-bg-grid.svg";
+import eduBgLogo from "@/public/assets/edu-bg-logo.svg";
 
 export default function Hero() {
   return (
     <Stack height={"calc(100vh - 140px)"}>
       <Image
-        src={eduBg}
+        src={eduBgLogo}
         alt="edu-bg"
         style={{
           position: "absolute",
-          top: "0",
-          left: "0",
+          top: "50%",
+          left: "50%",
           zIndex: -1,
           width: "100%",
-          objectFit: "cover",
-          height: "100vh",
+          objectFit: "fit",
+          height: "60vh",
+          transform: "translateX(-50%) translateY(-50%)",
         }}
       />
+      <Image
+        src={eduBgGrid}
+        alt="edu-bg"
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          zIndex: -2,
+          width: "100%",
+          objectFit: "fit",
+          height: "60vh",
+          transform: "translateX(-50%) translateY(-50%)",
+        }}
+      />
+      <Stack
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "20%",
+          transform: "translateX(-50%) translateY(-50%)",
+          zIndex: -2,
+          width: "400px",
+          height: "400px",
+          backgroundImage:
+            "radial-gradient( rgba(2, 102, 255, 40%) 0%, rgba(2, 102, 255, 0%) 100% )",
+          filter: "blur(15px)",
+          "-webkit-filter": "blur(50px)",
+        }}
+      ></Stack>
+      <Stack
+      display={{
+        xs: "none",
+        md: "block"
+      }}
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "80%",
+          transform: "translateX(-50%) translateY(-50%)",
+          zIndex: -2,
+          width: "400px",
+          height: "400px",
+          backgroundImage:
+            "radial-gradient( rgba(2, 102, 255, 40%) 0%, rgba(2, 102, 255, 0%) 100% )",
+          filter: "blur(15px)",
+          "-webkit-filter": "blur(50px)",
+        }}
+      ></Stack>
       <Stack
         width={"100%"}
         height={"100%"}

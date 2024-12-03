@@ -6,8 +6,9 @@ import styles from "./header.module.css";
 import { Stack } from "@mui/material";
 import Link from "next/link";
 import EastIcon from "@mui/icons-material/East";
+import eduLogo from "@/public/assets/edu-logo.svg"
 
-export default function Header({ isLight }) {
+export default function Header({ isLight, isEdu }) {
   return (
     <Stack
       position={"relative"}
@@ -22,9 +23,9 @@ export default function Header({ isLight }) {
       <header className={styles.header}>
         <Link href={"/"}>
           <Image
-            src={(isLight && LogoLight) || LogoDark}
+            src={isEdu && eduLogo || (isLight && LogoLight) || LogoDark}
             alt="Logo"
-            height={25}
+            height={isEdu ? 30 : 25}
           />
         </Link>
         <Stack
@@ -54,7 +55,7 @@ export default function Header({ isLight }) {
               Get a quote <EastIcon />
             </Link>
           </Stack>
-          <HamMenu isLight={isLight} />
+          <HamMenu isLight={isLight} isEdu={isEdu} />
         </Stack>
       </header>
     </Stack>

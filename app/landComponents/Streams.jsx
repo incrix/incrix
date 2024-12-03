@@ -180,11 +180,11 @@ function StreamsCard({ title, img, link }) {
           },
         }}
         width={{
-          xs: "160px",
+          xs: "150px",
           md: "200px",
         }}
         height={{
-          xs: "160px",
+          xs: "150px",
           md: "200px",
         }}
         gap={2}

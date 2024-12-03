@@ -9,6 +9,7 @@ import PCB from "./components/PCB";
 import Product from "./components/Product";
 import Integrations from "./components/Integrations";
 import Funnel from "./components/Funnel";
+import Footer from "@/components/Footer/Footer";
 
 export default function Page() {
   return (
@@ -23,6 +24,7 @@ export default function Page() {
       <Integrations />
       <PCB />
       <Funnel />
+      <Footer />
     </Stack>
   );
 }

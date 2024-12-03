@@ -8,10 +8,11 @@ import WhyUs from "./landComponents/WhyUs";
 import SuperPower from "./landComponents/SuperPower";
 import Funnel from "@/components/Funnel/Funnel";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
-    <Stack spacing={2} position={"relative"}>
+    <Stack  position={"relative"}>
       <Header isLight={true} />
       <Hero />
       <Streams />
@@ -21,6 +22,7 @@ export default function Home() {
       <SuperPower />
       <StartupIndia />
       <Funnel />
+      <Footer />
     </Stack>
   );
 }

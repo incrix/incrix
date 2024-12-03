@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 import { Stack } from "@mui/material";
 import NavBar from "./NavBar";
 
-export default function HamMenu({ isLight }) {
+export default function HamMenu({ isLight, isEdu }) {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
@@ -51,10 +51,10 @@ export default function HamMenu({ isLight }) {
           height: "100%",
           width: "100%",
           borderRadius: "50%",
-          backgroundColor: isLight ? (isActive ? "white" : "black") : "white",
+          backgroundColor: isEdu ? "var(--education)" :isLight ? (isActive ? "white" : "black") : "white",
           transition: "background-color 0.3s ease-in-out",
           "&:hover": {
-            backgroundColor: isActive ? "white" : "var(--primary)",
+            backgroundColor: isActive ? "white" : isEdu ? "black" : "var(--primary)",
           },
           "&:hover path": {
             stroke: !isLight && !isActive ? "white !important" : "",

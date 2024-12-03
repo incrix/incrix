@@ -94,7 +94,12 @@ export default function OurExpertise() {
             </Typography>
           </Typography>
           <Stack width={"100%"} gap={4} alignItems={"center"}>
-            <Stack direction={"row"} gap={4} flexWrap={"wrap"} justifyContent={"center"}>
+            <Stack
+              direction={"row"}
+              gap={4}
+              flexWrap={"wrap"}
+              justifyContent={"center"}
+            >
               <ExpertCard
                 index={"01"}
                 title={"App Development"}
@@ -124,7 +129,12 @@ export default function OurExpertise() {
                 ]}
               />
             </Stack>
-            <Stack direction={"row"} gap={4} flexWrap={"wrap"} justifyContent={"center"}>
+            <Stack
+              direction={"row"}
+              gap={4}
+              flexWrap={"wrap"}
+              justifyContent={"center"}
+            >
               <ExpertCard
                 index={"03"}
                 title={"Technology Consultation"}
@@ -164,7 +174,10 @@ export default function OurExpertise() {
 const ExpertCard = ({ index, title, description, link, serviceList }) => {
   return (
     <Stack
-      width={"410px"}
+      width={{
+        xs: "100%",
+        sm: "410px",
+      }}
       // height={"250px"}
       gap={2}
       bgcolor={"#1A1C1E"}
@@ -190,8 +203,26 @@ const ExpertCard = ({ index, title, description, link, serviceList }) => {
           {title}
         </Typography>
       </Stack>
-      <Stack direction={"row"} justifyContent={"space-between"}>
-        <Typography variant="p" fontSize={16} fontWeight={400} width={"30%"}>
+      <Stack
+        direction={{
+          xs: "column",
+          sm: "row",
+        }}
+        justifyContent={"space-between"}
+        gap={{
+          xs: 2,
+          sm: 0
+        }}
+      >
+        <Typography
+          variant="p"
+          fontSize={16}
+          fontWeight={400}
+          width={{
+            xs: "100%",
+            sm: "30%",
+          }}
+        >
           {description}
         </Typography>
         <Stack gap={1}>

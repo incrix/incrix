@@ -7,11 +7,12 @@ import Succeed from "./components/Succeed";
 import TechCourse from "./components/TechCourse";
 import Growth from "./components/Growth";
 import Funnel from "@/components/Funnel/Funnel";
+import Footer from "@/components/Footer/Footer";
 
 export default function EducationPage() {
   return (
     <Stack>
-      <Header isLight={true} isEducation={true} />
+      <Header isLight={true} isEdu={true} />
       <Hero />
       <Colab />
       <AboutEducation />
@@ -19,6 +20,7 @@ export default function EducationPage() {
       <TechCourse />
       <Growth />
       <Funnel />
+      <Footer textColor={"var(--education)"} isLight/>
     </Stack>
   );
 }
