@@ -65,7 +65,7 @@ export default function Streams() {
             </Typography>
             <Stack direction={"row"} gap={2} alignItems={"center"}>
               <Link
-                href="/streams"
+                href="/contact"
                 style={{
                   color: "white",
                   backgroundColor: "black",
@@ -83,7 +83,7 @@ export default function Streams() {
               >
                 Get Quote
               </Link>
-              <Link href="/streams">Learn More</Link>
+              <Link href="/contact">Learn More</Link>
             </Stack>
           </Stack>
           <Stack

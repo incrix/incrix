@@ -106,7 +106,7 @@ export default function OurExpertise() {
                 description={
                   "Innovative mobile solutions for your business needs."
                 }
-                link={"/"}
+                link={"/contact"}
                 serviceList={[
                   "Custom iOS and Android apps",
                   "Cross-platform frameworks",
@@ -120,7 +120,7 @@ export default function OurExpertise() {
                 description={
                   "Elevate your online presence with cutting-edge web applications."
                 }
-                link={"/"}
+                link={"/contact"}
                 serviceList={[
                   "Custom web apps using latest fws",
                   "Responsive design",
@@ -141,7 +141,7 @@ export default function OurExpertise() {
                 description={
                   "Expert guidance to drive your technology strategy forward."
                 }
-                link={"/"}
+                link={"/contact"}
                 serviceList={[
                   "IT infrastructure assessment",
                   "Middlewares and migration",
@@ -155,7 +155,7 @@ export default function OurExpertise() {
                 description={
                   "Pioneering innovation for future-ready solutions."
                 }
-                link={"/"}
+                link={"/contact"}
                 serviceList={[
                   "AI & ML prototypes",
                   "IOT development",
@@ -211,7 +211,7 @@ const ExpertCard = ({ index, title, description, link, serviceList }) => {
         justifyContent={"space-between"}
         gap={{
           xs: 2,
-          sm: 0
+          sm: 0,
         }}
       >
         <Typography

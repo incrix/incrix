@@ -1,7 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import Link from "next/link";
 
-export default function Funnel() {
+export default function Funnel({isEdu}) {
   return (
     <Stack
       width={"100%"}
@@ -11,7 +11,7 @@ export default function Funnel() {
         lg: "var(--dd-side-padding)",
         xl: "var(--dd-side-padding)",
       }}
-      bgcolor={"black"}
+      bgcolor={ isEdu ? "white" : "black"}
       alignItems={"center"}
     >
       <Stack
@@ -24,7 +24,7 @@ export default function Funnel() {
         gap={4}
         margin={"60px 0"}
       >
-        <Stack color={"white"} gap={4}>
+        <Stack color={isEdu ? "black" : "white"} gap={4}>
           <Typography
             variant="h2"
             fontWeight={700}
@@ -71,7 +71,7 @@ export default function Funnel() {
             "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",
             marginRight: "40px",
             padding: "20px 40px",
-            backgroundColor: "white",
+            backgroundColor: isEdu ? "var(--education)" : "white",
             borderRadius: "80px",
           }}
         >
@@ -86,6 +86,7 @@ export default function Funnel() {
             }}
             alignItems="flex-start"
             whiteSpace="nowrap"
+            color={isEdu ? "white" : "black"}
           >
             Let&apos;s work!
           </Typography>

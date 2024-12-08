@@ -19,7 +19,7 @@ export default function EducationPage() {
       <Succeed />
       <TechCourse />
       <Growth />
-      <Funnel />
+      <Funnel  isEdu={true} />
       <Footer textColor={"var(--education)"} isLight/>
     </Stack>
   );

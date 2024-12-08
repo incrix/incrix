@@ -102,6 +102,27 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+@media screen and (max-height: 800px) {
+  .nav .link {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-height: 1200px) {
+  .nav .link {
+    font-size: 60px;
+  }
+  .nav .btnLink {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .nav a {
+    font-size: 30px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .nav {
     padding-left: 10vw;
@@ -144,14 +165,4 @@
   }
 }
 
-@media screen and (max-height: 800px) {
-  .nav .link {
-    font-size: 40px;
-  }
-}
 
-@media screen and (max-height: 600px) {
-  .nav a {
-    font-size: 30px;
-  }
-}
