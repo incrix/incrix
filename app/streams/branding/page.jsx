@@ -9,6 +9,11 @@ import LetsBuild from "./components/LetsBuild";
 import DigitalMarketing from "./components/DigitalMarketing";
 import Footer from "@/components/Footer/Footer";
 
+export const metadata = {
+  title: "Branding",
+  description: "We build Brands that builds History",
+};
+
 export default function Page() {
   return (
     <Stack>

@@ -11,6 +11,11 @@ import Integrations from "./components/Integrations";
 import Funnel from "./components/Funnel";
 import Footer from "@/components/Footer/Footer";
 
+export const metadata = {
+  title: "Automation",
+  description: "Where Automation Meets Innovative Solutions",
+};
+
 export default function Page() {
   return (
     <Stack>

@@ -8,6 +8,12 @@ import Experience from "./components/Experience";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
+export const metadata = {
+  title: "About",
+  description:
+    "At Incrix, we're the architects of possibility, the dreamers who code reality, and the alchemists turning ideas into innovation. Welcome to our universe of technologies.",
+};
+
 export default function AboutPage() {
   return (
     <Stack position={"relative"}>

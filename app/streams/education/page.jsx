@@ -9,6 +9,12 @@ import Growth from "./components/Growth";
 import Funnel from "@/components/Funnel/Funnel";
 import Footer from "@/components/Footer/Footer";
 
+export const metadata = {
+  title: "Education",
+  description:
+    "Invest in Tomorrow with Future Technologies. Our education solutions are meticulously designed to meet your industry's unique requirements, ensuring you achieve excellence at every step.",
+};
+
 export default function EducationPage() {
   return (
     <Stack>
@@ -19,8 +25,8 @@ export default function EducationPage() {
       <Succeed />
       <TechCourse />
       <Growth />
-      <Funnel  isEdu={true} />
-      <Footer textColor={"var(--education)"} isLight/>
+      <Funnel isEdu={true} />
+      <Footer textColor={"var(--education)"} isLight />
     </Stack>
   );
 }

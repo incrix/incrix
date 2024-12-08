@@ -41,7 +41,7 @@ export default function Header({ isLight, isEdu }) {
             }}
           >
             <Link
-              href={"/"}
+              href={"/contact"}
               style={{
                 marginRight: "80px",
                 display: "flex",

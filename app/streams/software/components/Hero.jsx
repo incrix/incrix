@@ -1,6 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import softwareBg from "@/public/assets/software-bg.png";
+import softwareBg1 from "@/public/assets/software-bg1.png";
 import softwareHero from "@/public/assets/software-hero.png";
 
 export default function Hero() {

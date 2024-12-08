@@ -3,6 +3,9 @@ import Image from "next/image";
 import avinash from "@/public/member/avinash.png";
 import abishek from "@/public/member/abishek.png";
 import jegan from "@/public/member/jegan.png";
+import johnson from "@/public/member/johnson.png";
+import manisha from "@/public/member/manisha.png";
+import dharani from "@/public/member/dharani.png";
 
 export default function Mavericks() {
   return (
@@ -73,6 +76,24 @@ export default function Mavericks() {
               responsibility={"PCB, Embedded, IOT"}
               image={jegan}
             />
+            <MemberCard
+              name={"Johnson"}
+              role={"Graphic Designer"}
+              responsibility={"Graphic, 3D, Brand design."}
+              image={johnson}
+            />
+            <MemberCard
+              name={"Manisha"}
+              role={"UI/UX Designer"}
+              responsibility={"Website, Apps"}
+              image={manisha}
+            />
+            <MemberCard
+              name={"Dharani"}
+              role={"Frontend Developer"}
+              responsibility={"Next JS, React, Node JS"}
+              image={dharani}
+            />
           </Stack>
           <hr />
         </Stack>
@@ -89,10 +110,14 @@ const MemberCard = ({ name, role, responsibility, image }) => {
         sm: "220px",
       }}
     >
-      <Image src={image} alt={name} style={{
-        width: "100%",
-        height: "auto",
-      }}/>
+      <Image
+        src={image}
+        alt={name}
+        style={{
+          width: "100%",
+          height: "auto",
+        }}
+      />
       <Typography
         fontSize={20}
         width={{

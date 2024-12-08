@@ -167,10 +167,10 @@ export default function Footer({ textColor, isLight, isGradient }) {
                       STREAMS
                     </Typography>
                     <Stack color={isLight ? "black" : "white"} spacing={2}>
-                      <Link href="/automation">Automation</Link>
-                      <Link href="/branding">Branding</Link>
-                      <Link href="/software">Software</Link>
-                      <Link href="/education">Education</Link>
+                      <Link href="/streams/automation">Automation</Link>
+                      <Link href="/streams/branding">Branding</Link>
+                      <Link href="/streams/software">Software</Link>
+                      <Link href="/streams/education">Education</Link>
                     </Stack>
                   </Stack>
                   <Stack spacing={2}>
@@ -188,10 +188,16 @@ export default function Footer({ textColor, isLight, isGradient }) {
                       FOLLOW US
                     </Typography>
                     <Stack color={isLight ? "black" : "white"} spacing={2}>
-                      <Link href="/automation">Instagram</Link>
-                      <Link href="/branding">LinkedIn</Link>
-                      <Link href="/software">Facebook</Link>
-                      <Link href="/education">X</Link>
+                      <Link href="https://www.instagram.com/incrix_techlutions/">
+                        Instagram
+                      </Link>
+                      <Link href="https://in.linkedin.com/company/incrix">
+                        LinkedIn
+                      </Link>
+                      <Link href="https://www.facebook.com/incrix.techlutions">
+                        Facebook
+                      </Link>
+                      <Link href="https://x.com/incrix">X</Link>
                     </Stack>
                   </Stack>
                   <Stack spacing={2}>
@@ -265,8 +271,8 @@ export default function Footer({ textColor, isLight, isGradient }) {
                   sx={{ color: isLight ? "black" : "white" }}
                 >
                   COPYRIGHT {new Date().getFullYear()} - INCRIX TECHLUTIONS LLP
-                  - CIN AAX-3668
-                  <Link href="/privacy-policy">PRIVACY POLICY</Link> .
+                  - CIN AAX-3668&emsp;
+                  <Link href="/privacy-policy">PRIVACY POLICY</Link>&emsp;
                   <Link href="/terms-of-service">COOKIES POLICY</Link>
                 </Typography>
                 <Stack

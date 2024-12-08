@@ -8,6 +8,12 @@ import Approach from "./components/Approach";
 import ToolTech from "./components/ToolTech";
 import Footer from "@/components/Footer/Footer";
 
+export const metadata = {
+  title: "Software",
+  description:
+    "All the power you need, just get started, Enhance your software solutions with advanced coding practices, robust performance optimization, and adaptable management tools.",
+};
+
 export default function Page() {
   return (
     <Stack>
