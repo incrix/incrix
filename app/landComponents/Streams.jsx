@@ -8,7 +8,7 @@ import education from "@/public/icons/education.svg";
 
 export default function Streams() {
   return (
-    <Stack padding={"100px 0"}>
+    <Stack padding={"100px 0"} id={"services"}>
       <Stack
         width={"100%"}
         padding={{
@@ -127,7 +127,7 @@ export default function Streams() {
               <StreamsCard
                 title={"Development"}
                 img={dev}
-                link={"/streams/development"}
+                link={"/streams/software"}
               />
 
               <StreamsCard

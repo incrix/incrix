@@ -60,11 +60,11 @@ export default function NavBar() {
               Contact
             </Link>
           </div>
-          <div className="nav-item-holder">
+          {/* <div className="nav-item-holder">
             <Link className={styles.btnLink} href={"/career"}>
               Career
             </Link>
-          </div>
+          </div> */}
         </Stack>
       </nav>
     </Stack>

@@ -146,9 +146,9 @@ export default function Footer({ textColor, isLight, isGradient }) {
                         Home
                       </Link>
                       <Link href="/about">About</Link>
-                      <Link href="/services">Services</Link>
-                      <Link href="/portfolio">Life @ Incrix</Link>
-                      <Link href="/career">Career</Link>
+                      <Link href="/#services">Services</Link>
+                      {/* <Link href="/portfolio">Life @ Incrix</Link> */}
+                      {/* <Link href="/career">Career</Link> */}
                       <Link href="/contact">Contacts</Link>
                     </Stack>
                   </Stack>
@@ -215,8 +215,18 @@ export default function Footer({ textColor, isLight, isGradient }) {
                       GET IN TOUCH
                     </Typography>
                     <Stack color={isLight ? "black" : "white"} spacing={2}>
-                      <Link href="/automation">info@incrix.com</Link>
-                      <Link href="/branding">+91 9786799765</Link>
+                      <Link href={"mailto:info@incrix.com"}>
+                        info@incrix.com
+                      </Link>
+                      <Link
+                        href={
+                          "https://wa.me/+919385781566/?text=Hi%2C%20I%E2%80%99m%20interested%20in%20your%20services.%20Can%20you%20share%20more%C2%A0details%3F"
+                        }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        +91 9385781566
+                      </Link>
                     </Stack>
                     <Typography
                       variant="h6"
@@ -272,8 +282,8 @@ export default function Footer({ textColor, isLight, isGradient }) {
                 >
                   COPYRIGHT {new Date().getFullYear()} - INCRIX TECHLUTIONS LLP
                   - CIN AAX-3668&emsp;
-                  <Link href="/privacy-policy">PRIVACY POLICY</Link>&emsp;
-                  <Link href="/terms-of-service">COOKIES POLICY</Link>
+                  <Link href="#">PRIVACY POLICY</Link>&emsp;
+                  <Link href="#">COOKIES POLICY</Link>
                 </Typography>
                 <Stack
                   direction={{
