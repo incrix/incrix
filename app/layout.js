@@ -3,7 +3,8 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { ThemeProvider } from "@mui/material";
 import theme from "@/components/Theme";
-import Footer from "@/components/Footer/Footer";
+import { GoogleTagManager } from "@next/third-parties/google";
+import MicrosoftClarity from "./metrics/MicrosoftClarity";
 
 const centraleSans = localFont({
   src: [
@@ -74,6 +75,8 @@ export default function RootLayout({ children }) {
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
+      <GoogleTagManager gtmId="GT-NGWVXGM" />
+      <MicrosoftClarity />
     </html>
   );
 }
