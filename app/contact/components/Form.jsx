@@ -62,7 +62,7 @@ const StyledChip = styled(Chip)(({ theme, isSelected }) => ({
 export default function Form() {
   const [category, setCategory] = useState("Automation");
   const [services, setServices] = useState([]);
-
+  
   const handleCategory = (event, newCategory) => {
     if (newCategory !== null) {
       setCategory(newCategory);

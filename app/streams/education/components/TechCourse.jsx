@@ -1,3 +1,4 @@
+"use client";
 import { Button, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import CusTimeline from "@/components/Timeline/CusTimeline";
@@ -63,6 +64,7 @@ export default function TechCourse() {
                 <Button
                   variant="contained"
                   sx={{ whiteSpace: "nowrap", bgcolor: "var(--education)" }}
+                  onClick={() => window.open(`/pdf/incrix-broucher.pdf`)}
                 >
                   Download brochure
                 </Button>

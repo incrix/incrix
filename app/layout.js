@@ -52,12 +52,13 @@ const smooch = localFont({
 
 export const metadata = {
   title: {
-    default: "Incrix",
+    default: "Incrix | Make Your Ideas Alive",
     template: "%s | Incrix",
   },
   description:
     "Incrix Techlutions is a multi-field technology based company offers both software and hardware solutions for complex solutions in our society using futuristic technologies like Blockchain, Edge Computing, AI, IoT etc. We also expand our service to various verticals such as Branding, Automations, Education etc,.",
-  twitter: {
+    metadataBase: new URL('https://incrix.com'),
+    twitter: {
     card: "summary_large_image",
     site: "@incrix",
     creator: "@incrix",
