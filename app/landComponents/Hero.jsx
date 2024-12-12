@@ -163,6 +163,7 @@ function VideoPlayer() {
         width={"100%"}
         style={{
           maxWidth: "1400px",
+          backgroundColor: "var(--primary)",
         }}
       >
         <source src="/assets/incrix.mp4" type="video/mp4" />

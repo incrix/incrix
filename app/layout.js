@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material";
 import theme from "@/components/Theme";
 import { GoogleTagManager } from "@next/third-parties/google";
 import MicrosoftClarity from "./metrics/MicrosoftClarity";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const centraleSans = localFont({
   src: [
@@ -76,7 +77,8 @@ export default function RootLayout({ children }) {
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
-      <GoogleTagManager gtmId="GT-NGWVXGM" />
+      <GoogleTagManager gtmId="G-99J9GGM78X" />
+      <GoogleAnalytics gaId="G-99J9GGM78X"/>
       <MicrosoftClarity />
     </html>
   );

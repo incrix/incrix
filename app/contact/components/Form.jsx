@@ -62,7 +62,12 @@ const StyledChip = styled(Chip)(({ theme, isSelected }) => ({
 export default function Form() {
   const [category, setCategory] = useState("Automation");
   const [services, setServices] = useState([]);
-  
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+
   const handleCategory = (event, newCategory) => {
     if (newCategory !== null) {
       setCategory(newCategory);
@@ -108,10 +113,48 @@ export default function Form() {
     ],
   };
 
-  useEffect(() => {
-    console.log("Category:", category);
-    console.log("Services:", services);
-  }, [category, services]);
+  const onSubmit = () => {
+    if (
+      !category ||
+      !services.length ||
+      !message ||
+      !name ||
+      !company ||
+      !email ||
+      !phone
+    ) {
+      alert("Please fill all the required fields");
+      return;
+    }
+
+    fetch("https://incrix.com/form.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        category,
+        services,
+        message,
+        name,
+        company,
+        email,
+        phone,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        setCategory("Automation");
+        setServices([]);
+        setMessage("");
+        setName("");
+        setCompany("");
+        setEmail("");
+        setPhone("");
+        alert("Form submitted successfully");
+      });
+  };
 
   return (
     <Stack id="project" bgcolor={"white"}>
@@ -243,17 +286,20 @@ export default function Form() {
                 maxWidth: "600px",
               }}
               multiline
+              onChange={(e) => setMessage(e.target.value)}
             />
             <Stack direction={{ xs: "column", md: "row" }} gap={2}>
               <StyledTextField
                 sx={{ width: "300px" }}
                 label="Name *"
                 variant="standard"
+                onChange={(e) => setName(e.target.value)}
               />
               <StyledTextField
                 sx={{ width: "300px" }}
                 label="Company *"
                 variant="standard"
+                onChange={(e) => setCompany(e.target.value)}
               />
             </Stack>
             <Stack direction={{ xs: "column", md: "row" }} gap={2}>
@@ -261,11 +307,13 @@ export default function Form() {
                 sx={{ width: "300px" }}
                 label="Email *"
                 variant="standard"
+                onChange={(e) => setEmail(e.target.value)}
               />
               <StyledTextField
                 sx={{ width: "300px" }}
                 label="Phone *"
                 variant="standard"
+                onChange={(e) => setPhone(e.target.value)}
               />
             </Stack>
           </Stack>
@@ -279,6 +327,7 @@ export default function Form() {
               },
               width: "150px",
             }}
+            onClick={onSubmit}
           >
             Submit
           </Button>
